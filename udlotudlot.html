@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Udlot-udlot</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style/udlot.css" media="screen" />
+  <script src="script/jquery-3.5.0.min.js"></script>
+  <script src="style/js/bootstrap.min.js"></script>
+  <script src="script/udlot.js"></script>
+  <script src="script/udlot-load.js"></script>
+  <script src="script/udlot-loadNext.js"></script>
+  <script src="script/udlot-groupInstructions.js"></script>
+</head>
+
+<body>
+  <audio id="click">
+    <source src="audio/click1.m4a" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="tong">
+    <source src="audio/tong.m4a" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="chime">
+    <source src="audio/chime.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="cueAh1">
+    <source src="audio/321-ah1.m4a" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="cueAh2">
+    <source src="audio/321-ah2.m4a" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="cueAh3">
+    <source src="audio/321-ah3.m4a" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
+  <nav class="navbar navbar-light" style="background-color: #5a5a5a;">
+    <!-- Navbar content -->
+    <form class="form-inline">
+      <button id="btn-drone" class="btn btn-primary mr8" type="button" onclick="setCountdown(0)" data-toggle="button"
+        aria-pressed="false" autocomplete="off">Drone</button>
+      <button id="btn1" class="btn btn-primary mr8" type="button" onclick="setCountdown(1)" data-toggle="button"
+        aria-pressed="false" autocomplete="off">Group 1</button>
+      <button id="btn2" class="btn btn-primary mr8" type="button" onclick="setCountdown(2)" data-toggle="button"
+        aria-pressed="false" autocomplete="off">Group 2</button>
+      <button id="btnVox1" class="btn btn-primary mr8" type="button" onclick="setCountdown(3)" data-toggle="button"
+        aria-pressed="false" autocomplete="off">Voice 1</button>
+      <button id="btnVox2" class="btn btn-primary mr8" type="button" onclick="setCountdown(4)" data-toggle="button"
+        aria-pressed="false" autocomplete="off">Voice 2</button>
+      <button id="btnVox3" class="btn btn-primary mr8" type="button" onclick="setCountdown(5)" data-toggle="button"
+        aria-pressed="false" autocomplete="off">Voice 3</button>
+      <button id="btnPlay" class="btn btn-success" type="button" onclick="startPerformance()" disabled>START PERFORMANCE</button>
+    </form>
+  </nav>
+
+  <div id="perf-notes" class="perf-notes">
+    <h1>Udlot-udlot by Jose Maceda</h1>
+    <h2>Philippine National Artist for Music</h2><br>
+    <h2>Performance Notes</h2>
+    <div id="online-use" class="online-use">
+      <h4>Please read the performance notes prior to performance. </h4>
+      <h4>Select a Group to perform, then click the "Start Performance" button.</h4>
+    </div>
+    <div id="drone" class="group-instruction">
+      <h2>DRONE</h2>
+      <h5>Beat a pair of percussion stick continuously, slowly until the end of the music.</h5>
+      <h5>Follow the tempo displayed in the instruction box.</h5>
+    </div>
+    <div id="group" class="group-instruction">
+      <h2>MIXED INSTRUMENTS: GROUP 1 and GROUP 2</h2>
+      <h5>
+        For the duration of each cell number, follow the instrument and choose any counting pair displayed
+        in the instruction box. </h5>
+      <h5> The player hits, pounds, blows the instrument twice: one at the end of count the 1st number,
+        and another at the end of counting the 2nd number.</h5>
+      <h5>Each player should count the numbers at their own speed.</h5>
+    </div>
+    <div id="voice" class="group-instruction">
+      <h2>VOICE</h2>
+      <h5>Follow the vocal phrases in the instruction box.</h5>
+    </div>
+  </div>
+
+  <div id="performance" style="display: none; min-width: 740px">
+    <div id="countdown" class="card" style="display: none; width: 30rem; margin: 200px auto;">
+      <div class="card-body" style="text-align: center;">
+        <h2>COUNTERDOWN</h2>
+        <div class="progress">
+          <div id="progressbar" class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="25"
+            aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <h1 id="countdownnumber" class="countdownnumber">5</h1>
+      </div>
+    </div>
+
+    <div id="countbox" class="countbox text-left col-2">
+      <div id="counterdiv" class="counterdiv">
+        <h2>COUNTER</h2>
+        <h1 id="counter" class="counter">
+          1
+        </h1>
+      </div>
+      <div id="celldiv" class="celldiv">
+        <h2>CELL</h2>
+        <h1 id="cellnumber" class="cellnumber">
+          00
+        </h1>
+      </div>
+    </div>
+    <div id="instruction" class="card instruction">
+      <div class="card-body" style="text-align: center;">
+        <div class="card-header">
+          <h2 id="card-head">Cell <span>00</span></h1>
+        </div>
+        <p id="card-line1">SILENCE</p>
+        <p id="card-line2"></p>
+        <p id="drone-line"><span id="d1"></span><span id="d2"></span><span id="d3"></span>
+          <span id="d4"></span><span id="d5"></span><span id="d6"></span><span id="d7"></span></p>
+      </div>
+    </div>
+    <div id="next" class="card next">
+      <div class="card-body" style="text-align: center;">
+        <div class="card-header">
+          <h2 id="next-card-head">Next: Cell <strong>02</strong> - <strong>BUZZER</strong></h2>
+        </div>
+        <p id="next-card-line1">SILENCE</p>
+        <p id="next-card-line2"></p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

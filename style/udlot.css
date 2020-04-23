@@ -1,0 +1,120 @@
+@font-face {
+    font-family: MusiSync;
+    src: local('MusiSync'),
+    url('font/MusiSync.ttf');
+  }
+
+body {
+    font-family: "Helvetica Neue","Arial","Noto Sans","sans-serif"
+}
+
+div {
+    text-align: left;
+}
+
+/* h1 {
+    font-weight: bold !important;
+} */
+
+.perf-notes {
+    margin: 20px;
+    padding: 20px;
+    background-color: #bfc9cf;
+    border-radius: 10px;
+}
+
+.group-instruction {
+    margin-top: 30px;
+    border-top: 1px solid gray;
+    padding-top: 20px;
+}
+
+.mr8 {
+    margin-right: 8px;
+}
+
+.btn-primary {
+    color: #242424;
+    background-color: #ff9900;
+    border-color: #ff9900;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active {
+    color: #242424;
+    background-color: #befad9;
+    border-color: #befad9;
+}
+
+.btn-primary:disabled.active {
+    color: #242424;
+    background-color: #befad9;
+    border-color: #befad9;
+    cursor: no-drop;
+}
+
+.btn-primary:disabled {
+    color: gray;
+    background-color: #2a4561;
+    border-color: #2a4561;
+    cursor: no-drop;
+}
+
+.btn-success:disabled {
+    cursor: no-drop;
+}
+
+.countdownnumber {
+    font-size: 200px;
+}
+
+.countbox {
+    float: left;
+    margin: 20px 0px 0px 20px;
+    min-width: 200px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+}
+
+.counter {
+    font-size: 150px;
+}
+
+.counterdiv {
+    margin-top: 20px;
+}
+
+.celldiv {
+    margin-top: 20px;
+    color: gray;
+}
+
+.cellnumber {
+    font-size: 150px;
+    margin-top: -10px;
+}
+
+.instruction {
+    float: left;
+    width: 30rem;
+    min-width: 490px;
+    margin: 20px auto;
+    margin-left: 20px;
+}
+
+.next {
+    float: left;
+    width: 30rem;
+    min-width: 490px;
+    margin: 20px auto;
+    margin-left: 20px;
+    opacity: 0.5;
+}
+
+.instruction p, .next p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 5px 10px;
+}
