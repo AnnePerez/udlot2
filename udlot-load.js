@@ -84,7 +84,8 @@ function load7558(instrument, head, line1, line2) {
 
 function motif(instrument, head, line1, line2) {
   document.getElementById(head).innerHTML = instrument;
-  document.getElementById(line1).style.fontFamily = 'MusiSync';
+  // document.getElementById(line1).style.fontFamily = 'MusiSync';
+  document.getElementById(line1).style.fontFamily = 'Musica';
   document.getElementById(line1).style.fontSize = '70px';
   document.getElementById(line1).innerHTML = '{ q q Q q Q }';
   document.getElementById(line2).innerHTML = '';

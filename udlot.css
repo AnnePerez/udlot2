@@ -1,7 +1,6 @@
 @font-face {
-    font-family: MusiSync;
-    src: local('MusiSync'),
-    url('font/MusiSync.ttf');
+    font-family: 'MusiSync';
+    src: local('MusiSync'), url('MusiSync.ttf') format('truetype');
   }
 
 body {
@@ -11,10 +10,6 @@ body {
 div {
     text-align: left;
 }
-
-/* h1 {
-    font-weight: bold !important;
-} */
 
 .perf-notes {
     margin: 20px;
