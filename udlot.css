@@ -14,7 +14,7 @@ div {
 .perf-notes {
     margin: 20px;
     padding: 20px;
-    background-color: #bfc9cf;
+    background-image: linear-gradient(to bottom right, #e9eef1, #b7d3d3);
     border-radius: 10px;
 }
 

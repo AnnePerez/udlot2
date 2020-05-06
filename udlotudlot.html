@@ -6,14 +6,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="udlot.css" media="screen" />
-  <script src="jquery-3.5.0.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="udlot.js"></script>
-  <script src="udlot-load.js"></script>
-  <script src="udlot-loadNext.js"></script>
-  <script src="udlot-groupInstructions.js"></script>
+  <script src="bootstrap/jquery-3.5.0.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="scripts/udlot.js"></script>
+  <script src="scripts/udlot-load.js"></script>
+  <script src="scripts/udlot-loadNext.js"></script>
+  <script src="scripts/udlot-groupInstructions.js"></script>
 </head>
 
 <body>
@@ -61,37 +61,103 @@
   </nav>
 
   <div id="perf-notes" class="perf-notes">
-    <h1>Udlot-udlot by Jose Maceda</h1>
+    <h1><strong>Udlot-udlot by Jose Maceda</strong></h1>
     <h2>Philippine National Artist for Music</h2><br>
     <h2>Performance Notes</h2>
-    <div id="online-use" class="online-use">
-      <h4>Please read the performance notes prior to performance. </h4>
-      <h4>Select a Group to perform, then click the "Start Performance" button.</h4>
+    <div>
+      <h4>Please read prior to performance: </h4>
+      <ol>
+        <li>
+          <p>The score can be accessed at <a
+              href="http://www.astermux.com/udlot2/udlotudlot.html">http://www.astermux.com/udlot2/udlotudlot.html</a>.
+            For offline access, please go <a
+              href="https://github.com/AnnePerez/udlot2">https://github.com/AnnePerez/udlot2</a>.
+            Download the whole folder as a zip file. Unzip the folder and click on the <strong>udlotudlot.html</strong>
+            file.
+          </p>
+        </li>
+        <li>
+          <p>Select your assigned group (DRONE, GROUP 1, GROUP2, VOICE1, VOICE 2 OR VOICE3),
+            then click the "Start Performance" button. If you want to restart your performance,
+            click RESTART or reload the page. If you click the wrong group, reload the page.
+          </p>
+        </li>
+        <li>
+          <p>
+            Make sure that your recording includes the initial bell in the "COUNT DOWN".
+            Use the highest resolution possible for your video recording.
+            If you are recording using your mobile phone, use landscape orientation with the instruments visible,
+            as long as the audio is clear and audible.
+          </p>
+          <p>
+            If you prefer, you can mute the audio as you record your performance.
+          </p>
+        </li>
+        <li>
+          <p>While this performance is virtual, please wear appropriate performance attire.</p>
+        </li>
+        <li>
+          <p>
+            Please submit your recorded performance/performances to udlotudlot2020@gmail.com.
+            Please use this format for saving your file: UDLOTGroupNameofPerformer (ex. UDLOTVoice1KatzTrangco).
+            Each performance should be saved as a different file.
+          </p>
+          <h6>The <strong>deadline for submission</strong> is: <strong>15 May 2020</strong></h6>
+          <h6>Please send your inquiries to <em>udlotudlot2020@gmail.com</em>.</h6>
+        </li>
+      </ol>
     </div>
     <div id="drone" class="group-instruction">
       <h2>DRONE</h2>
-      <h5>Beat a pair of percussion stick continuously, slowly until the end of the music.</h5>
-      <h5>Follow the tempo displayed in the instruction box.</h5>
+      <h5>Beat a pair of percussion sticks* continuously until the end of the piece. Follow the tempo of the score.</h5>
+      <p style="margin-left: 30px;">* Percussion sticks can be wooden sticks, claves, or household implements that
+        produce a flat (non-resonant)
+        sound such as wooden utensils on the bottom of a pan.</p>
     </div>
     <div id="group" class="group-instruction">
       <h2>MIXED INSTRUMENTS: GROUP 1 and GROUP 2</h2>
       <h5>
-        For the duration of each cell number, follow the instrument and choose any counting pair displayed
-        in the instruction box. </h5>
-      <h5> The player hits, pounds, blows the instrument twice: one at the end of count the 1st number,
-        and another at the end of counting the 2nd number.</h5>
-      <h5>Each player should count the numbers at their own speed.</h5>
+        Prepare the three instruments you will need during the performance: a whistle*,
+        a buzzer** and a pair of bamboo tubes***, and keep them nearby. </h5>
+      <p style="margin-left: 30px;">
+        * Alternatives to the bamboo whistle/flute can be used such as the panpipe
+        (use one pitch only) or the mouth of an open bottle.
+      </p>
+      <p style="margin-left: 30px;">
+        ** Alternatives to buzzers can be the Jew’s harp / jaw harp / kubing or any implement that can simulate a
+        buzzing sound such as an egg whisk.
+      </p>
+      <p style="margin-left: 30px;">
+        *** If bamboo tubes are not available, you can use household implements such hitting a fork against
+        the side of a plate to produce a resonant sound.
+      </p>
+
+      <p>
+        For the duration of each cell number, use the instrument indicated in the instruction box and choose any
+        counting pair
+        displayed in the instruction box. Within one cell, you can play any combination of counting pairs.
+      </p>
+
+      <p>
+        Play the instrument twice within a counting pair: one at the end of the count of the 1st number, and another at
+        the end of the count of the 2nd number.
+        For example, for 2 & 4, count 1 <strong>2</strong> - 1 2 3 <strong>4</strong> (play at 2 and 4).
+      </p>
+
+      <p>
+        Each player can choose their own tempo.
+      </p>
     </div>
     <div id="voice" class="group-instruction">
       <h2>VOICE</h2>
-      <h5>Follow the vocal phrases in the instruction box.</h5>
+      <h5>Follow the audio guide. </h5>
     </div>
   </div>
 
   <div id="performance" style="display: none; min-width: 740px">
     <div id="countdown" class="card" style="display: none; width: 30rem; margin: 200px auto;">
       <div class="card-body" style="text-align: center;">
-        <h2>COUNTERDOWN</h2>
+        <h2>COUNT DOWN</h2>
         <div class="progress">
           <div id="progressbar" class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="25"
             aria-valuemin="0" aria-valuemax="100"></div>

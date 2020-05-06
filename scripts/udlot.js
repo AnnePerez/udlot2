@@ -70,7 +70,9 @@ function resetDroneColor() {
 }
 
 function loopVox(count) {
-  if (count !== 15) {
+  console.log('loopVox count:', count);
+
+  if (count === 1) {
     if (group === 3) {
       cueAh1.play();
     } else if (group === 4) {

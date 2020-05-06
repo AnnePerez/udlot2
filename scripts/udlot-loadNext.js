@@ -2,7 +2,7 @@ function loadNext() {
   var head = 'next-card-head';
   var line1 = 'next-card-line1';
   var line2 = 'next-card-line2';
-  console.log('loadNext GROUP:', group, ' CELL: ', cell);
+  // console.log('loadNext GROUP:', group, ' CELL: ', cell);
   if (group === 1) {
     switch (cell) {
       case 0:

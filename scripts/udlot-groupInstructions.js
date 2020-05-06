@@ -1,5 +1,5 @@
 function updateInstruction() {
-  console.log('updateInstruction GROUP:', group, ' CELL: ', cell);
+  // console.log('updateInstruction GROUP:', group, ' CELL: ', cell);
   var head = 'card-head';
   var line1 = 'card-line1';
   var line2 = 'card-line2';
