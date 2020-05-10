@@ -154,13 +154,13 @@ function loadNext() {
         load7558('Next Cell 08: BUZZER', head, line1, line2);
         break;
       case 8:
-        load2324('Next Cell 09', head, line1, line2);
+        load2324('Next Cell 09: BUZZER', head, line1, line2);
         break;
       case 9:
-        load2324('Next Cell 10: TUBE', head, line1, line2);
+        load2324('Next Cell 10: BUZZER', head, line1, line2);
         break;
       case 10:
-        load2324('Next Cell 11: TUBE', head, line1, line2);
+        load2324('Next Cell 11: BUZZER', head, line1, line2);
         break;
       case 11:
         loadSilence('Next Cell 12', head, line1, line2);
